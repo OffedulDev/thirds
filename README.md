@@ -22,6 +22,10 @@ docker compose up --build -d
 
 Apri `http://localhost:3000`. La prima password viene mostrata nei log, consultabili con `docker compose logs app`. I dati restano nella cartella locale `data/` anche quando il container viene ricreato. Per aggiornare l'app dopo aver modificato il codice, riesegui `docker compose up --build -d`; per arrestarla usa `docker compose down`.
 
+## Pubblicazione dell'immagine Docker
+
+Il workflow `.github/workflows/publish-image.yml` pubblica su GitHub Container Registry (`ghcr.io`) a ogni push sul branch predefinito e quando invii un tag di versione come `v1.2.0`. Non richiede segreti aggiuntivi: usa il `GITHUB_TOKEN` del workflow con permesso di scrittura dei pacchetti. L'immagine viene pubblicata come `ghcr.io/<proprietario>/<repository>:latest` e con tag di versione e commit. GHCR conserva l'immagine; per eseguire l'app serve comunque un host Docker.
+
 Le pagine di amministrazione e controllo richiedono l'accesso. Al primo avvio viene creato `data/config.json` con l'utente `admin` e una password casuale, mostrata una sola volta nel terminale. Modifica `auth.username` e `auth.password` in quel file per scegliere le credenziali; il file è locale e non va pubblicato. `config.example.json` mostra la struttura attesa. Le sessioni durano 12 ore. Le pagine overlay restano pubbliche per poter essere caricate da OBS.
 
 ## Durante la diretta
