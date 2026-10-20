@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accesso - Elezioni scolastiche</title>
+  <link rel="stylesheet" href="/style.css?v=console-polish-1">
+  <link rel="stylesheet" href="/login.css?v=auth-1">
+</head>
+<body class="app-page login-page">
+  <main class="login-panel">
+    <a class="brand" href="/">Elezioni scolastiche</a>
+    <p class="eyebrow">AREA RISERVATA</p>
+    <h1>Accedi</h1>
+    <p class="login-description">Inserisci le credenziali per gestire le liste e il controllo in diretta.</p>
+    <form id="login-form">
+      <label>Nome utente<input id="username" name="username" autocomplete="username" required autofocus></label>
+      <label>Password<input id="password" name="password" type="password" autocomplete="current-password" required></label>
+      <button class="button primary" type="submit">Accedi</button>
+      <p id="login-message" class="form-message" role="alert"></p>
+    </form>
+  </main>
+  <script src="/login.js?v=auth-1" defer></script>
+</body>
+</html>

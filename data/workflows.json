@@ -1,0 +1,61 @@
+{
+  "workflows": [
+    {
+      "id": "edfed732-3db0-4372-b933-f0b384eaff64",
+      "name": "MONOPOLIST",
+      "motto": "ZERO IMPREVISTI SOLO OPPORTUNITÀ",
+      "logo": "/uploads/858c0bd6-40df-4d8e-b9a9-27b7ea93d799.png",
+      "candidates": [
+        "VIVOLO LORENZO",
+        "GANDOLFI TOMMASO",
+        "PIZZI GABRIELE",
+        "CHIRIAC ANDREI"
+      ]
+    },
+    {
+      "id": "0b58c1af-a54d-47ff-b4ee-7f145b1de60c",
+      "name": "THE DEVIL WEARS LISTA",
+      "motto": "MENO PATTI COL DIAVOLO, PIÙ PATTI CON LA PRESIDE",
+      "logo": "",
+      "candidates": [
+        "FEDERICI SARA",
+        "SY ADJA NDEY AWA",
+        "DJEBBOUR CHAHINEZ"
+      ]
+    },
+    {
+      "id": "fd11ee74-7c3f-4125-9692-69e015d9e715",
+      "name": "FATTURAGE",
+      "motto": "VOLTI NUOVI, IMPEGNI CONCRETI, FATTI REALI",
+      "logo": "",
+      "candidates": [
+        "FARINA ALICE",
+        "PEDRONI GIOIA",
+        "MILANESI JULIA",
+        "GHILARDOTTI SIMONE",
+        "PELLEGRINI GIACOMO",
+        "FERRO ANGELICA"
+      ]
+    },
+    {
+      "id": "ec79237c-8014-49cf-b48e-1d7a1fd73852",
+      "name": "APOCALIST",
+      "motto": "DISTRUGGIAMO IL SILENZIO",
+      "logo": "",
+      "candidates": [
+        "MASSARI LORENZO",
+        "MARSIGLIA JONATAN COSMA",
+        "SCOLARI SILVIA MONICA",
+        "ASSANDRI TOMMASO",
+        "DI CARLO DANIELE",
+        "OMMENIELLO DOMENICO",
+        "ZANICOTTI MARCO",
+        "KOVACI GREIS"
+      ]
+    }
+  ],
+  "activeId": "edfed732-3db0-4372-b933-f0b384eaff64",
+  "overlayEnabled": true,
+  "entranceEnabled": true,
+  "entranceSequence": 41
+}

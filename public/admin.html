@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liste elettorali - Gestione</title>
+  <link rel="stylesheet" href="/style.css?v=console-polish-1">
+</head>
+<body class="app-page">
+  <header class="topbar">
+    <a class="brand" href="/">Elezioni scolastiche</a>
+    <nav><a class="active" href="/">Liste</a><a href="/control">Controllo in diretta</a><a href="/overlay" target="_blank">Apri grafica &#8599;</a><a href="/lists-overlay" target="_blank">Apri presentazione &#8599;</a><button class="text-button" id="logout" type="button">Esci</button></nav>
+  </header>
+  <main class="layout admin-layout">
+    <section class="panel workflow-panel">
+      <div class="section-heading"><h1>Liste</h1><button id="new-workflow" class="button primary">Aggiungi lista</button></div>
+      <div id="workflow-list" class="workflow-list"></div>
+      <p id="empty-state" class="empty-state" hidden>Non ci sono ancora liste. Aggiungi la prima per iniziare.</p>
+    </section>
+    <section class="panel form-panel">
+      <div class="form-heading"><p class="eyebrow" id="form-eyebrow">NUOVA</p><h2 id="form-title">Aggiungi lista</h2></div>
+      <form id="workflow-form">
+        <input type="hidden" id="workflow-id">
+        <label>Nome della lista<input id="name" maxlength="100" required placeholder="Esempio: Futuro verde"></label>
+        <label>Motto<input id="motto" maxlength="200" placeholder="Un breve motto elettorale"></label>
+        <input id="logo" type="hidden">
+        <label>Logo <span class="optional">(facoltativo)</span><input id="logo-file" type="file" accept="image/png,image/jpeg,image/webp,image/gif"><span id="logo-help" class="field-help">Carica PNG, JPEG, WebP o GIF, massimo 5 MB.</span></label>
+        <label>Candidati <span class="field-help">Un nome per riga</span><textarea id="candidates" rows="6" required placeholder="Alessandro Rossi&#10;Giulia Bianchi&#10;Luca Conti"></textarea></label>
+        <div class="form-actions"><button class="button primary" type="submit" id="save-button">Salva lista</button><button class="button secondary" type="button" id="cancel-edit">Svuota</button></div>
+        <p id="form-message" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <script src="/auth.js?v=auth-1" defer></script>
+  <script src="/admin.js?v=logo-upload-1" defer></script>
+</body>
+</html>

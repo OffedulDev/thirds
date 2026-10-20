@@ -1,0 +1,7 @@
+{
+  "name": "school-election-thirds",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gestione delle liste elettorali e grafiche in diretta per OBS.",
+  "scripts": { "start": "node server.js" }
+}

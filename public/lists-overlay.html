@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="it" class="lists-overlay-document">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Presentazione delle liste</title>
+  <link rel="stylesheet" href="/lists-overlay.css?v=7">
+</head>
+<body class="lists-overlay-page">
+  <main id="list-stage" class="list-stage" aria-live="polite" aria-atomic="true">
+    <article class="break-card">
+      <div class="break-brand">
+        <div class="break-logo"><img id="break-logo" alt="" hidden><span id="break-fallback" hidden></span></div>
+        <h1 id="break-name"></h1>
+        <p id="break-motto" hidden></p>
+      </div>
+      <section class="break-candidates" aria-labelledby="candidate-heading">
+        <h2 id="candidate-heading">Candidati</h2>
+        <ul id="break-candidate-list"></ul>
+        <p id="break-empty" hidden>Nessun candidato inserito</p>
+      </section>
+    </article>
+    <article id="voting-psa" class="break-card psa-card" hidden aria-labelledby="psa-title">
+      <div class="psa-accent" aria-hidden="true"></div>
+      <div class="psa-content">
+        <p class="psa-eyebrow">INFORMAZIONI</p>
+        <h1 id="psa-title">Istruzioni per votare</h1>
+        <div class="psa-copy">
+          <p>Il voto viene espresso da ciascuno studente mediante una croce nella casella del MOTTO della lista prescelta.</p>
+          <p>Oltre al voto di lista si possono esprimere due preferenze.</p>
+          <p>La preferenza pu&#242; essere espressa con un segno X accanto al nominativo del candidato che si desidera eleggere e che deve appartenere alla lista prescelta.</p>
+          <p>Qualunque altro segno o scritta sulla scheda determiner&#224; l&#8217;annullamento del voto.</p>
+        </div>
+      </div>
+    </article>
+    <p id="break-empty-state" class="break-empty-state" hidden>Nessuna lista inserita.</p>
+  </main>
+  <script src="/lists-overlay.js?v=6" defer></script>
+</body>
+</html>

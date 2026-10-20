@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Controllo in diretta - Liste elettorali</title>
+  <link rel="stylesheet" href="/style.css?v=console-polish-1">
+</head>
+<body class="app-page">
+  <header class="topbar">
+    <a class="brand" href="/">Elezioni scolastiche</a>
+    <nav><a href="/">Liste</a><a class="active" href="/control">Controllo in diretta</a><a href="/overlay" target="_blank">Apri grafica &#8599;</a><a href="/lists-overlay" target="_blank">Apri presentazione &#8599;</a><button class="text-button" id="logout" type="button">Esci</button></nav>
+  </header>
+  <main class="control-layout">
+    <section class="panel control-panel" aria-label="Pannello di controllo in diretta">
+      <div class="deck-heading"><h1>Controllo in diretta</h1><div class="live-status" id="live-status-wrap"><span class="status-dot"></span><span id="live-status">Connessione alla grafica&#8230;</span></div></div>
+      <div class="deck-toolbar">
+        <span class="list-picker-label">Liste</span>
+        <label class="entrance-switch"><input id="entrance-enabled" type="checkbox"><span class="switch-track" aria-hidden="true"></span><span><strong>Sequenza di ingresso</strong><small>Quando mostri o cambi lista</small></span></label>
+      </div>
+      <div id="workflow-buttons" class="workflow-buttons" role="group" aria-label="Pulsanti delle liste"></div>
+      <p id="empty-workflows" class="empty-state" hidden>Aggiungi una lista per iniziare.</p>
+    </section>
+  </main>
+  <script src="/auth.js?v=auth-1" defer></script>
+  <script src="/control.js?v=console-polish-1" defer></script>
+</body>
+</html>
