@@ -1,7 +1,7 @@
 const form = document.querySelector('#login-form');
 const message = document.querySelector('#login-message');
 const next = new URLSearchParams(location.search).get('next');
-const destination = next === '/control' ? '/control' : '/admin';
+const destination = ['/admin/control', '/admin/create'].includes(next) ? next : '/admin';
 
 form.addEventListener('submit', async event => {
   event.preventDefault();

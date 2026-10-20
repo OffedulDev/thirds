@@ -71,11 +71,19 @@ form.addEventListener('submit', async event => {
     }
     const id = fields.id.value;
     await api(id ? `/api/workflows/${encodeURIComponent(id)}` : '/api/workflows', { method: id ? 'PUT' : 'POST', body: JSON.stringify(data) });
+    if (!id && location.pathname === '/admin/create') {
+      location.assign('/admin');
+      return;
+    }
     state = await api('/api/state'); clearForm(); render();
   } catch (error) { document.querySelector('#form-message').textContent = error.message; }
 });
-document.querySelector('#new-workflow').onclick = () => { clearForm(); fields.name.focus(); };
-document.querySelector('#cancel-edit').onclick = clearForm;
+document.body.classList.toggle('create-page', location.pathname === '/admin/create');
+document.querySelector('#new-workflow').onclick = () => location.assign('/admin/create');
+document.querySelector('#cancel-edit').onclick = () => {
+  if (location.pathname === '/admin/create') location.assign('/admin');
+  else clearForm();
+};
 fields.logoFile.addEventListener('change', () => {
   const file = fields.logoFile.files[0];
   document.querySelector('#logo-help').textContent = file ? `Logo selezionato: ${file.name}` : 'Carica PNG, JPEG, WebP o GIF, massimo 5 MB.';

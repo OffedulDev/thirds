@@ -244,7 +244,15 @@ const server = http.createServer(async (request, response) => {
     }
   }
 
-  const page = url.pathname === '/' || url.pathname === '/admin' ? 'admin.html' : url.pathname === '/control' ? 'control.html' : url.pathname === '/login' ? 'login.html' : url.pathname === '/overlay' ? 'overlay.html' : url.pathname === '/lists-overlay' ? 'lists-overlay.html' : null;
+  if (url.pathname === '/') {
+    response.writeHead(302, { Location: '/admin', 'Cache-Control': 'no-store' });
+    return response.end();
+  }
+  if (url.pathname === '/control') {
+    response.writeHead(302, { Location: '/admin/control', 'Cache-Control': 'no-store' });
+    return response.end();
+  }
+  const page = url.pathname === '/admin' || url.pathname === '/admin/create' ? 'admin.html' : url.pathname === '/admin/control' ? 'control.html' : url.pathname === '/login' ? 'login.html' : url.pathname === '/overlay' ? 'overlay.html' : url.pathname === '/lists-overlay' ? 'lists-overlay.html' : null;
   if (page === 'admin.html' || page === 'control.html') {
     if (!sessionFor(request)) {
       response.writeHead(302, { Location: `/login?next=${encodeURIComponent(url.pathname)}`, 'Cache-Control': 'no-store' });

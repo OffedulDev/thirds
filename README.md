@@ -10,7 +10,7 @@ Installa Node.js 18 o una versione successiva, quindi esegui:
 npm start
 ```
 
-Apri `http://localhost:3000` per gestire le liste oppure `http://localhost:3000/control` per il controllo in diretta. In OBS, usa `http://localhost:3000/overlay` per la fascia informativa oppure `http://localhost:3000/lists-overlay` per la presentazione che mostra tutte le liste in ordine e inserisce le istruzioni di voto dopo ogni coppia di liste. Imposta le dimensioni della sorgente come quelle del canvas (per esempio, 1920 x 1080).
+Apri `http://localhost:3000/admin` per gestire le liste, `http://localhost:3000/admin/create` per aggiungerne una oppure `http://localhost:3000/admin/control` per il controllo in diretta. In OBS, usa `http://localhost:3000/overlay` per la fascia informativa oppure `http://localhost:3000/lists-overlay` per la presentazione che mostra tutte le liste in ordine e inserisce le istruzioni di voto dopo ogni coppia di liste. Imposta le dimensioni della sorgente come quelle del canvas (per esempio, 1920 x 1080).
 
 ## Avvio con Docker
 

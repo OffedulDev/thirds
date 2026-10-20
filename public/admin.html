@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Liste elettorali - Gestione</title>
-  <link rel="stylesheet" href="/style.css?v=console-polish-1">
+  <link rel="stylesheet" href="/style.css?v=admin-routes-and-sizing-1">
 </head>
 <body class="app-page">
   <header class="topbar">
-    <a class="brand" href="/">Elezioni scolastiche</a>
-    <nav><a class="active" href="/">Liste</a><a href="/control">Controllo in diretta</a><a href="/overlay" target="_blank">Apri grafica &#8599;</a><a href="/lists-overlay" target="_blank">Apri presentazione &#8599;</a><button class="text-button" id="logout" type="button">Esci</button></nav>
+    <a class="brand" href="/admin">Elezioni scolastiche</a>
+    <nav><a class="active" href="/admin">Liste</a><a href="/admin/control">Controllo in diretta</a><a href="/overlay" target="_blank">Apri grafica &#8599;</a><a href="/lists-overlay" target="_blank">Apri presentazione &#8599;</a><button class="text-button" id="logout" type="button">Esci</button></nav>
   </header>
   <main class="layout admin-layout">
     <section class="panel workflow-panel">
@@ -32,6 +32,6 @@
     </section>
   </main>
   <script src="/auth.js?v=auth-1" defer></script>
-  <script src="/admin.js?v=logo-upload-1" defer></script>
+  <script src="/admin.js?v=admin-create-route-1" defer></script>
 </body>
 </html>
